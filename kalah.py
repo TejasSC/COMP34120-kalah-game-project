@@ -172,4 +172,4 @@ class Kalah(object):
         return True
 
     def gameOver(arg):
-        return holesEmpty(board, 0) || holesEmpty(board, 1)
+        return holesEmpty(board, 0) or holesEmpty(board, 1)
