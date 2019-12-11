@@ -24,18 +24,16 @@ class Move(object):
 class Board(object):
     """docstring for Board."""
 
-    def __init__(self, holes = None, wells = None):
-        if holes is None or wells is None:
+    def __init__(self, holes = None):
+        if holes is None:
             self.makeNewBoard(7,7)
         else:
             self.holes = holes
-            self.wells = wells
 
     def makeMove(self, move):
         side, hole = move.side, move.hole
         if hole < 1:
             raise ValueError("Invalid move")
-
 
     def makeNewBoard(self,numHoles,seeds):
         if numHoles < 1:

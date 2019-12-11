@@ -26,7 +26,8 @@ def interpretStartMsg(msg):
     else:
         raise ValueError("Illegal position parameter: " + position)
 
-def interpretStateMsg(msg, board):
+#here holes will len(board.holes[0])
+def interpretStateMsg(msg, holes):
     # [end, again, move]
     moveTurn = [False, False, 0]
     if msg[len(msg)-1] != '\n':
@@ -46,7 +47,7 @@ def interpretStateMsg(msg, board):
             print("Move parameter set to illegal value")
 
     # 2nd argument = the board itself
-    l = len(board.holes[0])
+    l = len(holes)
     boardParts = parts[2].split(",")
     n = 2*(l+1)
     if n != len(boardParts):
