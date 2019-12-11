@@ -19,7 +19,7 @@ class Move(object):
         self.side = side
         self.hole = hole
     def __str__(self):
-        return "Side {0}, hole {1}".format(self.side + 1, self.hole + 1)
+        return "Side {0}, hole {1}".format(self.side, self.hole)
 
 class Board(object):
     """docstring for Board."""
