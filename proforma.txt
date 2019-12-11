@@ -2,12 +2,3 @@ COMP34120 - Kalah project proforma
 
 Group members: Tejas Chandrasekar, Sarunas Aliskevicius, Valeria Daneva,
 Jonas Daugis
-
-Brief description of approach:
--
-
-Division of labour:
-- Tejas:
-- Valeria:
-- Sarunas:
-- Jonas:

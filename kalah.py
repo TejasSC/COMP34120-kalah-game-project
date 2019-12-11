@@ -26,7 +26,7 @@ class Board(object):
 
     def __init__(self, holes = None, wells = None):
         if holes is None or wells is None:
-            self.makeNewBoard(8,8)
+            self.makeNewBoard(7,7)
         else:
             self.holes = holes
             self.wells = wells
