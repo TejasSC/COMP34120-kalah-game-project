@@ -71,9 +71,9 @@ def interpretStateMsg(msg, holes):
     # 3rd argument: who's turn is it
     if msgParts[3] == "YOU\n":
         moveTurn[1] = True
-    else if msgParts[3] == "OPP\n":
+    elif msgParts[3] == "OPP\n":
         moveTurn[1] = False
-    else if msgParts[3] == "END\n":
+    elif msgParts[3] == "END\n":
         moveTurn[0] = True
         moveTurn[1] = False
     else:

@@ -100,8 +100,7 @@ class Kalah(object):
     def __init__(self, board):
         self.board = board
     def moveAllowed(self, board, move):
-        return (move.hole <= len(board.holes[0])) and
-        (board.getSeeds(move.side, move.hole)) != 0)
+        return (move.hole <= len(board.holes[0])) and (board.getSeeds(move.side, move.hole) != 0)
 
     # returns a side, i.e. north or south
     def makeMove(self, board, move):
@@ -136,8 +135,7 @@ class Kalah(object):
 
         #capture
         #last seed was sown on the moving player's side
-        if (sowSide == move.side) and (sowHole > 0) and
-            (board.getSeeds(sowSide, sowHole)) and (board.getSeedsOpp(sowSide, sowHole)):
+        if (sowSide == move.side) and (sowHole > 0) and(board.getSeeds(sowSide, sowHole)) and (board.getSeedsOpp(sowSide, sowHole)):
             board.addSeedsToWell(move.side, 1+board.getSeedsOpp(move.side, sowHole))
             board.setSeeds(move.side, sowHole, 0)
             board.setSeedsOpp(move.side, sowHole, 0)
@@ -145,7 +143,7 @@ class Kalah(object):
         finishedSide = 0
         if holesEmpty(board, move.side):
             finishedSide = move.side
-        else if holesEmpty(board, 1 - move.side)
+        elif holesEmpty(board, 1 - move.side):
             finishedSide = 1 - move.side
 
         seeds = 0
