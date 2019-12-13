@@ -1,6 +1,5 @@
-//https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
-//https://towardsdatascience.com/tic-tac-toe-creating-unbeatable-ai-with-minimax-algorithm-8af9e52c1e7d
-//https://github.com/TejasSC/COMP34120-kalah-game-project/blob/master/kalah.py
+package MKAgent;
+
 public static int evaluate(Board board)
 {
     int seedsInNorthWell = getSeedsInStore(NORTH);
